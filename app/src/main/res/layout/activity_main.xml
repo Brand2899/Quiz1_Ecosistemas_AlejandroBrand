@@ -31,7 +31,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtHead">
 
         <TextView
-            android:id="@+id/txtTitle"
+            android:id="@+id/txtTitle1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Estudiantes registrados"
@@ -42,13 +42,14 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/bnRegister"
+            android:id="@+id/bnContinue1"
             android:layout_width="345dp"
             android:layout_height="60dp"
             android:backgroundTint="#0022E1"
             android:text="Registrar"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.479"
@@ -61,7 +62,7 @@
             android:layout_marginTop="32dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtTitle">
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle1">
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -3,9 +3,7 @@ package com.example.quiz1ecosistemas;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -25,12 +23,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         txtHead = findViewById(R.id.txtHead);
-        txtTitle = findViewById(R.id.txtTitle);
+        txtTitle = findViewById(R.id.txtTitle1);
 
         container_big = findViewById(R.id.container_big);
         container_text = findViewById(R.id.container_text);
 
-        bnRegister = findViewById(R.id.bnRegister);
+        bnRegister = findViewById(R.id.bnContinue1);
 
         bnRegister.setOnClickListener(
                 (v) -> {
