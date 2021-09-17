@@ -61,7 +61,7 @@ public class PageTwo extends AppCompatActivity {
                     i.putExtra("code", code);
                     i.putExtra("score", score);
                     saveUser();
-                    saveNameList();
+                    saveCodeList();
                     startActivity(i);
                     finish();
                 }
@@ -111,10 +111,10 @@ public class PageTwo extends AppCompatActivity {
         preferences.edit().putString("print", lastUser + user).apply();
     }
 
-    public void saveNameList(){
-        SharedPreferences listNames = getSharedPreferences("listNames", MODE_PRIVATE);
-        String newName = name + ";";
-        String oldNames = listNames.getString("list", "");
-        listNames.edit().putString("list", oldNames + newName).apply();
+    public void saveCodeList(){
+        SharedPreferences listCodes = getSharedPreferences("listCodes", MODE_PRIVATE);
+        String newCode = code + ";";
+        String oldCodes = listCodes.getString("list", "");
+        listCodes.edit().putString("list", oldCodes + newCode).apply();
     }
 }

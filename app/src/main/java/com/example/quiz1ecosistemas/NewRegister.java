@@ -28,7 +28,6 @@ public class NewRegister extends AppCompatActivity {
     private String name;
     private String code;
 
-    private boolean passName;
     private boolean passCode;
 
     @Override
@@ -47,7 +46,6 @@ public class NewRegister extends AppCompatActivity {
 
         bnContinue = findViewById(R.id.bnContinue);
 
-        passName = false;
         passCode = false;
 
         bnContinue.setOnClickListener(
@@ -57,35 +55,37 @@ public class NewRegister extends AppCompatActivity {
                         Toast.makeText(this, "Por favor llenar los campos", Toast.LENGTH_SHORT).show();
                     } else{
 
-                        name = editTxtName.getText().toString();
-                        code = editTxtCode.getText().toString();
+                        name = editTxtName.getText().toString().replace(" ", "");
+                        code = editTxtCode.getText().toString().replace(" ", "");
 
-                        checkRegisteredName();
                         checkRegisteredCode();
 
-                        //if(){
-
-                           // Toast.makeText(this, "Usuario registrado", Toast.LENGTH_SHORT).show();
-
+                        if(passCode){
                             Intent i = new Intent(this, PageOne.class);
                             i.putExtra("name", name);
                             i.putExtra("code", code);
                             startActivity(i);
                             finish();
-                        //}else{
-                           // Toast.makeText(this, "Usuario ya registrado", Toast.LENGTH_SHORT).show();
-                       // }
+                        }else {
+                            Toast.makeText(this, "Código ya registrado", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 }
         );
     }
 
-    public void checkRegisteredName(){
-        String[] nameList = getSharedPreferences("listNames", MODE_PRIVATE).getString("list", "").split(";");
-
-    }
-
     public void checkRegisteredCode(){
-
+        String[] codeList = getSharedPreferences("listCodes", MODE_PRIVATE).getString("list", "").split(";");
+        if(codeList.length == 0){
+            passCode = true;
+        }else{
+            for(int i = 0; i < codeList.length; i++){
+                if(!(codeList[i].equalsIgnoreCase(code))){
+                    passCode = true;
+                }else{
+                    passCode = false;
+                }
+            }
+        }
     }
 }
