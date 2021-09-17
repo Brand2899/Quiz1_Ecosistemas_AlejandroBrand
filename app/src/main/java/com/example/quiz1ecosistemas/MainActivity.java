@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        String print = getSharedPreferences("savedUser", MODE_PRIVATE).getString("print", "no usuario");
+        String print = getSharedPreferences("savedUser", MODE_PRIVATE).getString("print", "no hay usuarios registrados");
         txtPrint.setText(print);
     }
 }

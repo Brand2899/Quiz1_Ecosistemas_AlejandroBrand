@@ -28,11 +28,8 @@ public class NewRegister extends AppCompatActivity {
     private String name;
     private String code;
 
-    private ArrayList<String> registeredNames;
-    private ArrayList<String> registeredCodes;
-
-    private boolean passedName;
-    private boolean passedCode;
+    private boolean passName;
+    private boolean passCode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,11 +47,8 @@ public class NewRegister extends AppCompatActivity {
 
         bnContinue = findViewById(R.id.bnContinue);
 
-        registeredNames = new ArrayList<String>();
-        registeredCodes = new ArrayList<String>();
-
-        passedName = false;
-        passedCode = false;
+        passName = false;
+        passCode = false;
 
         bnContinue.setOnClickListener(
                 (v) -> {
@@ -69,9 +63,7 @@ public class NewRegister extends AppCompatActivity {
                         checkRegisteredName();
                         checkRegisteredCode();
 
-                        if(passedName && passedCode){
-                            registeredNames.add(name);
-                            registeredCodes.add(code);
+                        //if(){
 
                            // Toast.makeText(this, "Usuario registrado", Toast.LENGTH_SHORT).show();
 
@@ -80,29 +72,20 @@ public class NewRegister extends AppCompatActivity {
                             i.putExtra("code", code);
                             startActivity(i);
                             finish();
-                        }else{
-                            Toast.makeText(this, "Usuario ya registrado", Toast.LENGTH_SHORT).show();
-                        }
+                        //}else{
+                           // Toast.makeText(this, "Usuario ya registrado", Toast.LENGTH_SHORT).show();
+                       // }
                     }
                 }
         );
     }
 
     public void checkRegisteredName(){
-        if(registeredNames.size() == 0){
-            passedName = true;
-        } else{
-            for(int i = 0; i < registeredNames.size(); i++){
-                if(registeredNames.get(i).equalsIgnoreCase(name)){
-                   // Toast.makeText(this, "Nombre Ingresado Igual a Registrado", Toast.LENGTH_SHORT).show();
-                }
-            }
-        }
+        String[] nameList = getSharedPreferences("listNames", MODE_PRIVATE).getString("list", "").split(";");
+
     }
 
     public void checkRegisteredCode(){
-        if(registeredCodes.size() == 0){
-            passedCode = true;
-        }
+
     }
 }
