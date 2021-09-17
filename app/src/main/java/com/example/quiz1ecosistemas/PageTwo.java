@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -63,7 +64,9 @@ public class PageTwo extends AppCompatActivity {
                     i.putExtra("name", name);
                     i.putExtra("code", code);
                     i.putExtra("score", score);
+                    saveUser();
                     startActivity(i);
+                    finish();
                 }
         );
     }
@@ -84,7 +87,6 @@ public class PageTwo extends AppCompatActivity {
                             runOnUiThread(
                                     () ->{
                                         bnEnd.setEnabled(true);
-
                                     }
                             );
                         }
@@ -103,5 +105,12 @@ public class PageTwo extends AppCompatActivity {
         if(checkBox6.isChecked()){
             score += 0;
         }
+    }
+
+    public void saveUser(){
+        SharedPreferences preferences = getSharedPreferences("savedUser", MODE_PRIVATE);
+        String user = name + ":   -> " + score + "\n";
+        String lastUser = preferences.getString("print", "");
+        preferences.edit().putString("print", lastUser + user).apply();
     }
 }

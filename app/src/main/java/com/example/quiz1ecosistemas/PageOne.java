@@ -60,6 +60,7 @@ public class PageOne extends AppCompatActivity {
                     i.putExtra("code", code);
                     i.putExtra("score", score);
                     startActivity(i);
+                    finish();
                 }
         );
 

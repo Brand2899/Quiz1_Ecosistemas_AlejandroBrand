@@ -73,13 +73,13 @@ public class NewRegister extends AppCompatActivity {
                             registeredNames.add(name);
                             registeredCodes.add(code);
 
-                           // Toast.makeText(this, "" + passedName, Toast.LENGTH_SHORT).show();
-                          //  Toast.makeText(this, "" + passedCode, Toast.LENGTH_SHORT).show();
+                           // Toast.makeText(this, "Usuario registrado", Toast.LENGTH_SHORT).show();
 
                             Intent i = new Intent(this, PageOne.class);
                             i.putExtra("name", name);
                             i.putExtra("code", code);
                             startActivity(i);
+                            finish();
                         }else{
                             Toast.makeText(this, "Usuario ya registrado", Toast.LENGTH_SHORT).show();
                         }
@@ -91,10 +91,10 @@ public class NewRegister extends AppCompatActivity {
     public void checkRegisteredName(){
         if(registeredNames.size() == 0){
             passedName = true;
-        }else{
+        } else{
             for(int i = 0; i < registeredNames.size(); i++){
-                if(!(registeredNames.get(i) == name)){
-                    passedName = true;
+                if(registeredNames.get(i).equalsIgnoreCase(name)){
+                   // Toast.makeText(this, "Nombre Ingresado Igual a Registrado", Toast.LENGTH_SHORT).show();
                 }
             }
         }
@@ -103,12 +103,6 @@ public class NewRegister extends AppCompatActivity {
     public void checkRegisteredCode(){
         if(registeredCodes.size() == 0){
             passedCode = true;
-        }else{
-            for(int i = 0; i < registeredCodes.size(); i++){
-                if(!(registeredCodes.get(i) == code)){
-                    passedCode = true;
-                }
-            }
         }
     }
 }
