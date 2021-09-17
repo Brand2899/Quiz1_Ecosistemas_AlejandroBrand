@@ -73,13 +73,13 @@ public class NewRegister extends AppCompatActivity {
                             registeredNames.add(name);
                             registeredCodes.add(code);
 
-                            Toast.makeText(this, "" + passedName, Toast.LENGTH_SHORT).show();
-                            Toast.makeText(this, "" + passedCode, Toast.LENGTH_SHORT).show();
+                           // Toast.makeText(this, "" + passedName, Toast.LENGTH_SHORT).show();
+                          //  Toast.makeText(this, "" + passedCode, Toast.LENGTH_SHORT).show();
 
-                           /* Intent i = new Intent(this, PageOne.class);
+                            Intent i = new Intent(this, PageOne.class);
                             i.putExtra("name", name);
                             i.putExtra("code", code);
-                            startActivity(i);+*/
+                            startActivity(i);
                         }else{
                             Toast.makeText(this, "Usuario ya registrado", Toast.LENGTH_SHORT).show();
                         }
