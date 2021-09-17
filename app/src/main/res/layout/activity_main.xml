@@ -31,7 +31,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtHead">
 
         <TextView
-            android:id="@+id/txtTitle2"
+            android:id="@+id/txtTitle3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Estudiantes registrados"
@@ -42,7 +42,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/bnContinue2"
+            android:id="@+id/bnEnd"
             android:layout_width="345dp"
             android:layout_height="60dp"
             android:backgroundTint="#0022E1"
@@ -62,7 +62,7 @@
             android:layout_marginTop="32dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtTitle2">
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle3">
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

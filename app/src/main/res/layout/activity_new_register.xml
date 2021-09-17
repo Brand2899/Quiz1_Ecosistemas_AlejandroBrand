@@ -17,7 +17,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtHead1">
 
         <TextView
-            android:id="@+id/txtTitle2"
+            android:id="@+id/txtTitle3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nuevo Registro"
@@ -28,7 +28,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/bnContinue2"
+            android:id="@+id/bnEnd"
             android:layout_width="345dp"
             android:layout_height="60dp"
             android:backgroundTint="#0022E1"
@@ -41,14 +41,14 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/txtSubTitle2"
+            android:id="@+id/txtSubTitle3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="Introduzca los siguientes datos"
             android:textColor="#353535"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtTitle2" />
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle3" />
 
         <EditText
             android:id="@+id/editTxtName"
@@ -63,7 +63,7 @@
             android:textColorHint="#353535"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtSubTitle2"
+            app:layout_constraintTop_toBottomOf="@+id/txtSubTitle3"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <EditText

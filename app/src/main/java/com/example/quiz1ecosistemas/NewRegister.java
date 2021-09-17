@@ -28,15 +28,15 @@ public class NewRegister extends AppCompatActivity {
         setContentView(R.layout.activity_new_register);
 
         txtHead1 = findViewById(R.id.txtHead1);
-        txtTitle1 = findViewById(R.id.txtTitle2);
-        txtSubTitle1 = findViewById(R.id.txtSubTitle2);
+        txtTitle1 = findViewById(R.id.txtTitle3);
+        txtSubTitle1 = findViewById(R.id.txtSubTitle3);
 
         container_big1 = findViewById(R.id.container_big2);
 
         editTxtName = findViewById(R.id.editTxtName);
         editTxtCode = findViewById(R.id.editTxtCode);
 
-        bnContinue1 = findViewById(R.id.bnContinue2);
+        bnContinue1 = findViewById(R.id.bnEnd);
 
         bnContinue1.setOnClickListener(
                 (v) -> {
