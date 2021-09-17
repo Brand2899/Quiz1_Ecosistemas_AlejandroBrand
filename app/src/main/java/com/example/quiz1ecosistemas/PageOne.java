@@ -59,9 +59,6 @@ public class PageOne extends AppCompatActivity {
                     i.putExtra("name", name);
                     i.putExtra("code", code);
                     i.putExtra("score", score);
-                    Toast.makeText(this, name, Toast.LENGTH_SHORT).show();
-                    Toast.makeText(this, code, Toast.LENGTH_SHORT).show();
-                    Toast.makeText(this, "" + score, Toast.LENGTH_SHORT).show();
                     startActivity(i);
                 }
         );
