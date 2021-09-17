@@ -16,7 +16,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtHead3">
 
         <TextView
-            android:id="@+id/txtTitle3"
+            android:id="@+id/txtTitle2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Autoevaluación"
@@ -40,14 +40,14 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/txtSubTitle3"
+            android:id="@+id/txtSubTitle2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="Elige las opciones que apliquen a tu caso:"
             android:textColor="#353535"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtTitle3" />
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle2" />
 
         <CheckBox
             android:id="@+id/checkBox4"
@@ -58,7 +58,7 @@
             android:textColor="#353535"
             app:layout_constraintBottom_toTopOf="@+id/checkBox5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtSubTitle3" />
+            app:layout_constraintTop_toBottomOf="@+id/txtSubTitle2" />
 
         <CheckBox
             android:id="@+id/checkBox5"
@@ -77,6 +77,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="160dp"
+            android:background="#FFFFFF"
             android:text="No comprendí los temas"
             android:textColor="#353535"
             app:layout_constraintBottom_toTopOf="@+id/bnEnd"

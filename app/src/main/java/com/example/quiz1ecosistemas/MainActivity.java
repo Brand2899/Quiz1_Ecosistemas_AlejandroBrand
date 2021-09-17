@@ -24,12 +24,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         txtHead = findViewById(R.id.txtHead);
-        txtTitle = findViewById(R.id.txtTitle3);
+        txtTitle = findViewById(R.id.txtTitle);
 
         container_big = findViewById(R.id.container_big);
         container_text = findViewById(R.id.container_text);
 
-        bnRegister = findViewById(R.id.bnEnd);
+        bnRegister = findViewById(R.id.bnContinue);
 
         bnRegister.setOnClickListener(
                 (v) -> {

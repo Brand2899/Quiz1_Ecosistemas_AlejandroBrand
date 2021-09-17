@@ -11,34 +11,34 @@ import android.widget.Toast;
 
 public class NewRegister extends AppCompatActivity {
 
-    private TextView txtHead1;
-    private TextView txtTitle1;
-    private  TextView txtSubTitle1;
+    private TextView txtHead;
+    private TextView txtTitle;
+    private  TextView txtSubTitle;
 
     private ConstraintLayout container_big1;
 
     private EditText editTxtName;
     private EditText editTxtCode;
 
-    private Button bnContinue1;
+    private Button bnContinue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_register);
 
-        txtHead1 = findViewById(R.id.txtHead1);
-        txtTitle1 = findViewById(R.id.txtTitle3);
-        txtSubTitle1 = findViewById(R.id.txtSubTitle3);
+        txtHead = findViewById(R.id.txtHead);
+        txtTitle = findViewById(R.id.txtTitle);
+        txtSubTitle = findViewById(R.id.txtSubTitle);
 
-        container_big1 = findViewById(R.id.container_big2);
+        container_big1 = findViewById(R.id.container_big1);
 
         editTxtName = findViewById(R.id.editTxtName);
         editTxtCode = findViewById(R.id.editTxtCode);
 
-        bnContinue1 = findViewById(R.id.bnEnd);
+        bnContinue = findViewById(R.id.bnContinue);
 
-        bnContinue1.setOnClickListener(
+        bnContinue.setOnClickListener(
                 (v) -> {
                     if(editTxtName.getText().toString().isEmpty() || editTxtCode.getText().toString().isEmpty()){
                         Toast.makeText(this, "Por favor llenar los campos", Toast.LENGTH_SHORT).show();
