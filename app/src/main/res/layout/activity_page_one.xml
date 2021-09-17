@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".NewRegister">
+    tools:context=".PageOne">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container_big2"
@@ -14,13 +14,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtHead1">
+        app:layout_constraintTop_toBottomOf="@+id/txtHead2">
 
         <TextView
             android:id="@+id/txtTitle2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nuevo Registro"
+            android:text="Actividades de preparación"
             android:textColor="#353535"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -45,47 +45,49 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="Introduzca los siguientes datos"
+            android:text="Elige las opciones que apliquen a tu caso:"
             android:textColor="#353535"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtTitle2" />
 
-        <EditText
-            android:id="@+id/editTxtName"
-            android:layout_width="292dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="128dp"
-            android:ems="10"
-            android:hapticFeedbackEnabled="false"
-            android:hint="Nombre"
-            android:inputType="textPersonName"
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="Vi los videos de presentación para la clase"
             android:textColor="#353535"
-            android:textColorHint="#353535"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/checkBox2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtSubTitle2"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:layout_constraintTop_toBottomOf="@+id/txtSubTitle2" />
 
-        <EditText
-            android:id="@+id/editTxtCode"
-            android:layout_width="292dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="32dp"
-            android:ems="10"
-            android:hapticFeedbackEnabled="false"
-            android:hint="Código"
-            android:inputType="textPersonName"
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Realicé los ejemplos en los videos"
             android:textColor="#353535"
-            android:textColorHint="#353535"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/checkBox3"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTxtName"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:layout_constraintTop_toBottomOf="@+id/checkBox1" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="160dp"
+            android:text="Realicé los ejemplos en los videos"
+            android:textColor="#353535"
+            app:layout_constraintBottom_toTopOf="@+id/bnContinue2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/txtHead1"
+        android:id="@+id/txtHead2"
         android:layout_width="411dp"
         android:layout_height="75dp"
         android:background="#0022E1"

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class NewRegister extends AppCompatActivity {
 
@@ -25,5 +26,25 @@ public class NewRegister extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_register);
+
+        txtHead1 = findViewById(R.id.txtHead1);
+        txtTitle1 = findViewById(R.id.txtTitle2);
+        txtSubTitle1 = findViewById(R.id.txtSubTitle2);
+
+        container_big1 = findViewById(R.id.container_big2);
+
+        editTxtName = findViewById(R.id.editTxtName);
+        editTxtCode = findViewById(R.id.editTxtCode);
+
+        bnContinue1 = findViewById(R.id.bnContinue2);
+
+        bnContinue1.setOnClickListener(
+                (v) -> {
+                    if(editTxtName.getText().toString().isEmpty() || editTxtCode.getText().toString().isEmpty()){
+                        Toast.makeText(this, "Por favor llenar los campos", Toast.LENGTH_SHORT).show();
+                    } else{
+                    }
+                }
+        );
     }
 }

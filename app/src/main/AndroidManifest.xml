@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Quiz1Ecosistemas">
         <activity
+            android:name=".PageOne"
+            android:exported="true" />
+        <activity
             android:name=".NewRegister"
             android:exported="true" />
         <activity
