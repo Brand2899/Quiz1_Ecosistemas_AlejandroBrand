@@ -3,6 +3,7 @@ package com.example.quiz1ecosistemas;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -40,9 +41,18 @@ public class NewRegister extends AppCompatActivity {
 
         bnContinue.setOnClickListener(
                 (v) -> {
+
                     if(editTxtName.getText().toString().isEmpty() || editTxtCode.getText().toString().isEmpty()){
                         Toast.makeText(this, "Por favor llenar los campos", Toast.LENGTH_SHORT).show();
                     } else{
+
+                        String name = editTxtName.getText().toString();
+                        String code = editTxtCode.getText().toString();
+
+                        Intent i = new Intent(this, PageOne.class);
+                        i.putExtra("name", name);
+                        i.putExtra("code", code);
+                        startActivity(i);
                     }
                 }
         );

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".PageTwo">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -30,7 +31,7 @@
             android:id="@+id/bnEnd"
             android:layout_width="345dp"
             android:layout_height="60dp"
-            android:backgroundTint="#0022E1"
+            android:backgroundTint="#0000cd"
             android:text="Finalizar"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
@@ -90,7 +91,7 @@
         android:id="@+id/txtHead3"
         android:layout_width="411dp"
         android:layout_height="75dp"
-        android:background="#0022E1"
+        android:background="#0000cd"
         android:padding="20dp"
         android:text="Quiz 1"
         android:textAlignment="center"
