@@ -47,12 +47,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        Print();
-    }
 
-    public void Print(){
         String print = getSharedPreferences("savedUser", MODE_PRIVATE).getString("print", "no usuario");
-        txtPrint.setText("hola");
-        Toast.makeText(this, print, Toast.LENGTH_SHORT).show();
+        txtPrint.setText(print);
     }
 }

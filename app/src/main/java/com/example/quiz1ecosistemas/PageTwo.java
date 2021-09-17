@@ -56,10 +56,6 @@ public class PageTwo extends AppCompatActivity {
                 (v) -> {
                     calcScore();
 
-                    Toast.makeText(this, name, Toast.LENGTH_SHORT).show();
-                    Toast.makeText(this, code, Toast.LENGTH_SHORT).show();
-                    Toast.makeText(this, "" + score, Toast.LENGTH_SHORT).show();
-
                     Intent i = new Intent(this, MainActivity.class);
                     i.putExtra("name", name);
                     i.putExtra("code", code);
